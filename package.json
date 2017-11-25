@@ -4,7 +4,7 @@
   "description": "my es 6 modules",
   "main": "index.js",
   "scripts": {
-    "build":"webpack"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,11 @@
   "homepage": "https://github.com/nileshgulia1/ES6#readme",
   "dependencies": {
     "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "ts-loader": "^3.1.1",
+    "url-loader": "^0.6.2"
   }
 }
