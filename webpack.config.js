@@ -1,7 +1,8 @@
-module.exports={
+const config={
     entry: './app/index.js',
-    output: {
-        path: './build',
-        filename: 'bundle.js',
+    output:{
+        filename: "bundle.js",
+        path: __dirname + "/"
     }
 }
+module.exports = config;
