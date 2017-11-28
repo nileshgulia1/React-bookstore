@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "lint": "eslint ."
   },
   "babel": {
     "presets": [
@@ -31,6 +32,7 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
@@ -38,6 +40,8 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
     "eslint": "^4.12.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.5",
     "json-loader": "^0.5.7",
     "polyfill": "^0.1.0",
