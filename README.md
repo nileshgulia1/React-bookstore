@@ -1,1 +1,1 @@
-# ES6
+# React bookstore
