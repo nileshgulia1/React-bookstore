@@ -1,16 +1,19 @@
 var path = require('path');
 const config={
-  entry: './app/index.js',
+  entry: {
+    javascript: "./app/index.js",
+    html: "./build/index.html",
+  },
   output:{
       filename: "bundle.js",
-      path: __dirname + "/"
+      path: __dirname + "./build"
   },
   module: {
       rules: [
         { test: /\.css$/, use: 'css-loader' },
         { test: /\.ts$/, use: 'ts-loader', exclude: /node_modules/ },
         {
-          test: /\.(png|jpg|gif)$/,
+          test: [/\.(png|jpg|gif)$/,/\.html$/],
           use: [
             {
               loader: 'file-loader',

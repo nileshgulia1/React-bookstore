@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-console.log('Hello World');
+throw new Error("Module parse failed: Unexpected token (4:16)\nYou may need an appropriate loader to handle this file type.\n| import ReactDOM  from 'react-dom'\n| \n| ReactDOM.render(<div>Hello react app</div>,document.getElementById('root'));");
 
 /***/ })
 /******/ ]);
