@@ -7,6 +7,7 @@
     "build": "webpack",
     "start": "webpack-dev-server",
     "lint": "eslint ."
+    
   },
   "babel": {
     "presets": [
@@ -43,11 +44,13 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-react": "^7.5.1",
     "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
     "json-loader": "^0.5.7",
     "polyfill": "^0.1.0",
     "react": "^16.1.1",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^16.1.1",
+    "react-hot-loader": "^3.1.3",
     "react-loader": "^2.4.2",
     "style-loader": "^0.19.0",
     "ts-loader": "^3.1.1",
