@@ -10,7 +10,13 @@ export default class App extends React.Component {
     };
     this.search=this.search.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
    
+  }
+  handleKeyPress(event){
+    if(event.key ==='Enter')
+    this.search();
+
   }
 
   search(){
@@ -27,7 +33,8 @@ export default class App extends React.Component {
      <h2>Book Explorer!</h2>
      <FormGroup>
      <InputGroup>
-     <FormControl type="text" placeholder="Search for a book" onChange={this.handleChange}/>
+     <FormControl type="text" placeholder="Search for a book" onChange={this.handleChange}
+     onKeyPress={this.handleKeyPress}/>
      <InputGroup.Addon onClick={this.search}>
      <Glyphicon glyph="search"></Glyphicon>
      </InputGroup.Addon>
