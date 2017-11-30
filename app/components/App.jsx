@@ -1,5 +1,6 @@
 import React from 'react';
 import {FormGroup, FormControl,InputGroup, Glyphicon} from 'react-bootstrap';
+require('../index.css');
 
 export default class App extends React.Component {
   constructor(props){
@@ -20,6 +21,10 @@ export default class App extends React.Component {
   }
 
   search(){
+    const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=";
+    fetch('${BASE_URL}${this.state.query}', {method:"GET"})
+    .then(response =>  response.json())
+    .then(json => console.log(json))
     console.log("clicked on search  button" , this.state.query);
   }
   handleChange(event){
@@ -29,7 +34,7 @@ export default class App extends React.Component {
   }
   render() {
     return (
-     <div>
+     <div className="Global">
      <h2>Book Explorer!</h2>
      <FormGroup>
      <InputGroup>
