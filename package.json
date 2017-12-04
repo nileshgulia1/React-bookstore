@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy":"surge"
     
   },
   "babel": {
