@@ -1,12 +1,14 @@
 import React from 'react';
 import {FormGroup, FormControl,InputGroup, Glyphicon} from 'react-bootstrap';
 require('../index.css');
+import Gallery from './Gallery.jsx';
 
 export default class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      query : ''
+      query : '',
+      items : []
 
     };
     this.search=this.search.bind(this);
@@ -19,13 +21,19 @@ export default class App extends React.Component {
     this.search();
 
   }
-
+ 
   search(){
     let query = this.state.query;
     const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=" + query;
     fetch(BASE_URL, {method:"GET"})
     .then(response =>  response.json())
-    .then(json => console.log(json))
+    .then(json => {
+      let {items} = json;
+      this.setState({
+        items : items
+      })
+
+    })
     console.log("clicked on search  button" , this.state.query);
   }
   handleChange(event){
@@ -48,6 +56,7 @@ export default class App extends React.Component {
      
      
      </FormGroup>
+     <Gallery items={this.state.items} />
      </div>
       );
   }
