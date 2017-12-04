@@ -6,10 +6,21 @@ export default class Gallery extends React.Component{
         return (
             <div>
             {
-                this.props.items.map(item => {
-                    let {title} = item.volumeInfo
+                this.props.items.map((item , i) => {
+                    let {title, imageLinks , infoLink} = item.volumeInfo
                     return (
-                        <div>{title}</div>
+                        <a href ={infoLink}
+                        target = "_blank"
+                        key={i} className = "book">
+                        <img 
+                        src ={imageLinks !== undefined? imageLinks.thumbnail : ''} 
+                        alt = "book image"
+                        className = "bookImage"
+                        />
+                        <div className = "titleText">{title }</div>
+
+                        </a>
+                        
                     );
                 })
             }</div>
