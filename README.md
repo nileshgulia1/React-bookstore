@@ -4,6 +4,8 @@
 
 # React-Bookstore
 
+![](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjStOTwx4_bAhWBYo8KHeGVCUkQjRx6BAgBEAU&url=https%3A%2F%2Fthebutlercollegian.com%2F%3Fp%3D32776&psig=AOvVaw340m-2fKX8-FzsmwG5sgEz&ust=1526743214733200)
+
 This is a bookstore made with google-book APIs and React. All types of books are available through google-play store, though you have to buy them yourselves :).
 
 ## Getting Started
