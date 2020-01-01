@@ -24,6 +24,7 @@ export default class App extends React.Component {
  
   search(){
     let query = this.state.query;
+    if(query.length !== 0){
     const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=" + query;
     fetch(BASE_URL, {method:"GET"})
     .then(response =>  response.json())
@@ -34,7 +35,10 @@ export default class App extends React.Component {
       })
 
     })
-    console.log("clicked on search  button" , this.state.query);
+    console.log("clicked on search  button" , this.state.query);}
+    else {
+      alert("Enter name of book")
+    }
   }
   handleChange(event){
     this.setState({
