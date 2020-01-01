@@ -7,8 +7,7 @@
     "build": "webpack",
     "start": "webpack-dev-server",
     "lint": "eslint .",
-    "deploy":"surge"
-    
+    "deploy": "surge"
   },
   "babel": {
     "presets": [
